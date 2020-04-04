@@ -1,7 +1,7 @@
 /*
 Set the box sizing for every element on the page
-to border-box. Elements should have padding and 
-border included in the element's total width and height
+to border-box. This will ensure that elements have padding and 
+border included in the element's total width and height.
 */
 
 
