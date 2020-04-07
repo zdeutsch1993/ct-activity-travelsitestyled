@@ -3,6 +3,9 @@ Set the box sizing for every element on the page
 to border-box. This will ensure that elements have padding and 
 border included in the element's total width and height.
 */
+* {
+  box-sizing: border-box;
+}
 
 
 /*
@@ -12,24 +15,36 @@ Target the body element and set some common styles for the page:
  - font to helvetica
  - font size to 16px
 */
+body {
+  background-color: black;
+  color: whitesmoke;
+  font-family: Helvetica;
+  font-size: 16px;
+}
 
 
 /*
 override our h1 style to have a font size of 32px
 */
-
+h1 {
+  font-size: 32px;
+}
 
 
 /*
 override our h2 style to have a font size of 28px
 */
-
+h2 {
+  font-size: 28px;
+}
 
 /*
 style the element with the id of header-statement to have centered text
 */
 
-
+#header-statement {
+  text-align: center;
+}
 
 /*
 target the elements with a class of page-row and set the following properties:
@@ -38,7 +53,12 @@ target the elements with a class of page-row and set the following properties:
  - give the element a padding of 5%
  - give the element a margin of 2% on the top and bottom
 */
-
+.page-row  {
+  width: 100%;
+  clear: both;
+  padding: 5%;
+  margin: 2%;
+}
 
 
 /*
@@ -54,7 +74,18 @@ target the elements with a class of card and set the following properties:
  - background size to contain //Scale the image to the largest size such that both its width and its height can fit inside the content area
  - background to not repeat
 */
-
+.card {
+  width: 20%;
+  height: 300px;
+  margin: 2.5%;
+  padding-top: 15%;
+  float: left;
+  background-color: white;
+  text-align: center;
+  color: black;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
 
  
 /*
@@ -66,34 +97,49 @@ target the element with the id of hero and set the following properties
  - background image to our hero image (travel_hero.jpg) in our assets/images directory
  - background image to be fixed // this will give the effect of the page scrolling over the hero image
 */
-
-
+#hero {
+  width: 100%;
+  height: 450px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("../images/travel_hero.jpg");
+  background-attachment: fixed;
+}
 
 /*
 target the element with the class of card that also has an id of spain
  - set the background image to (spain_flag.svg) in our assets/images directory
 */
+.card#spain {
+  background-image: url("../images/spain_flag.svg");
+}
 
 
 /*
 target the element with the class of card that also has an id of italy
 - set the background image to (italy_flag.svg) in our assets/images directory
 */
-
+.card#italy  {
+  background-image: url("../images/italy_flag.svg");
+}
 
 
 /*
 target the element with the class of card that also has an id of aruba
 - set the background image to (aruba_flag.svg) in our assets/images directory
 */
-
+.card#aruba {
+  background-image: url("../images/aruba_flag.svg") ;
+}
 
 
 /*
 target the element with the class of card that also has an id of chile
 - set the background image to (chile_flag.svg) in our assets/images directory
 */
-
+.card#chile {
+  background-image: url("../images/chile_flag.svg");
+}
 
 
 /*
@@ -102,25 +148,37 @@ target the element with the class of card that also has an id of chile
   - height to 100px
   - line height to 100px
 */
- 
+ header {
+   width: 100%;
+   height: 100px;
+   line-height: 100px;
+ }
 
 
 /*
  target the element with the id of logo and float it to the left
 */
-
+#logo {
+  float: left;
+}
 
 /*
  target the nav element and float it to the right
 */
-
+nav {
+  float: right;
+}
 
  /*
  target the element with the id of nav-list
   - remove all margin and padding
   - remove bullets from the unorder list
 */
-
+#nav-list {
+  margin: 0;
+  padding:  0;
+  list-style-type: none;
+}
 
 /*
  target the elements with the class of nav-link
@@ -128,15 +186,26 @@ target the element with the class of card that also has an id of chile
   - top and bottom padding to 5px
   - left and right padding to 15px
 */
-
+.nav-link {
+  display:  inline;
+  padding-top:  5px;
+  padding-bottom: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
 
 /*
  target the links inside header element
   - remove the underline from the links
   - make sure the text is white
 */
-
-
+header a	{
+	text-decoration:	none;
+	color:	white;
+}
+header	a:hover	{
+text-decoration:	underline;
+}
 
 /*
  target the table element 
@@ -145,13 +214,19 @@ target the element with the class of card that also has an id of chile
   - make the width 100%
 */
 
-
+table	{
+border:	2px solid black;
+border-collapse:	collapse;
+width:	100%;
+}
 
 /*
  target the tr, td, and th elements
   - give a 2px black solid border to the table
 */
-
+tr, td, th  {
+  border: 2px solid black;
+}
 
 
 /*
@@ -159,20 +234,28 @@ target the element with the class of card that also has an id of chile
   - background color to black
   - text color to white
 */
-
+th  {
+  background-color: black;
+  color: white;
+}
 
 /*
  target the element with the id of travel-table 
   - make the text color black
   - make the background color white
 */
-
+#travel-table	{
+  color:  black;
+  background-color: white;
+}
 
 /*
  target the h3 element within the element with the id of travel-table 
   - center align the text
 */
-
+#travel-table h3{
+text-align:	center;
+}
 
 /*
  target the footer element
@@ -180,13 +263,19 @@ target the element with the class of card that also has an id of chile
   - height to 100px
   - line height to 100px
 */
-
+footer	{
+	width:	100%;
+	height:	100px;
+	line-height:	100px;
+}
 
 
 /*
  target the element with the id of copyright and float it to the left
 */
-
+#copyright	{
+float:	left;
+}
 
 /*
  target the element with the id of social-links
@@ -194,7 +283,13 @@ target the element with the class of card that also has an id of chile
   - give a top and bottom padding of 5px
   - give a left and right padding of 15px
 */
-
+#social-links {
+  float: right;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
 
 /*
  target the links inside the element with the id of social-links
